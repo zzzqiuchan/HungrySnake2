@@ -13,7 +13,7 @@ class Cloud(pyglet.sprite.Sprite):
         
         pyglet.sprite.Sprite.__init__(self, image, x=x, y=y, batch=batch, group=group)
         self.scale = s
-        self.speed = 20 + random.randint(0, 40)
+        self.speed = 10 + random.randint(0, 20)
         self.dead = False
         
     def update(self, dt):
@@ -42,6 +42,6 @@ class Clouds:
                 self.clouds.remove(c)
         
         if len(self.clouds) < 3:
-            if random.randint(1, 500) < 3:
+            if random.randint(1, 1000) < 2:
                 self.newCloud()
         

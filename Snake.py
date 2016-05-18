@@ -79,9 +79,10 @@ class Snake:
         new_direction = ''
 
         if self.change_direction != '':
-            dd = directions[self.change_direction] + directions[self.direction]
-            if dd != 0:#有效按键
-                new_direction = self.change_direction
+            cd = self.change_direction
+            dd = directions[cd] + directions[self.direction]
+            if dd != 0 and dd != 2 and dd != -2 and dd != 4 and dd != -4:#有效按键
+                new_direction = cd
             self.change_direction = ''
         
         if new_direction == '':
