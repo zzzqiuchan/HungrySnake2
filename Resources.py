@@ -34,3 +34,7 @@ snakebody2_rotation = {'upright':0, 'leftdown':0,
 
 
 background_image = pyglet.resource.image("background.png")
+cloud1_image = pyglet.resource.image("cloud1.png")
+cloud2_image = pyglet.resource.image("cloud2.png")
+center_image(cloud1_image)
+center_image(cloud2_image)
