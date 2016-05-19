@@ -29,7 +29,8 @@ class Game:
             color=GameConfig.textColor, font_size=GameConfig.textSize)
         self.bread = GameObject.Bread(GameConfig.firstFood, self.mainBatch, middlegroundGroup)
         
-        self.walls = Walls(GameConfig.logicMap, mainBatch, middlegroundGroup)
+        self.walls = Walls(mainBatch, middlegroundGroup)
+        self.walls.newWalls(GameConfig.logicMap)
         
         self.snake = Snake(mainBatch,middlegroundGroup)
         self.snake.newSnake(GameConfig.startPoint, GameConfig.startDirection)
