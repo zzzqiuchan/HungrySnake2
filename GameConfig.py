@@ -22,6 +22,7 @@ startDirection = "up"
 
 basePoint = (5, 5)
 
+rectColor = (255,0,0)#RGB
 #textColor = (255,201,14,255)#RGBA
 textColor = (0,0,0,255)#RGBA
 textSize = 16
