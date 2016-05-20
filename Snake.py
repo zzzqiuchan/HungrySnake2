@@ -103,9 +103,8 @@ class Snake:
         elif newPoint[1] < 0:
             newPoint = (newPoint[0], GameConfig.maxY - 1)
         
-        if newPoint in self.logicBody:
-            if newPoint != self.logicBody[0]:#旧的尾部可以碰
-                return -1
+        if newPoint in self.logicBody[1:]:#旧的尾部可以碰
+            return -1
         if wall.hitWall(newPoint):
             return -2
         
